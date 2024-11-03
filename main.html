@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phantom Thieves of Hearts</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+         body {
+            position: relative;
+            background-color: black;
+            background-size: cover;
+            background-position: center;
+            color: black;
+        }
+
+        .carousel-item {
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .content {
+            position: relative;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            background-color: rgba(0,0,0,0.7);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            width: 90%;
+            max-width: 600px;
+            z-index: 10;
+        }
+
+        .navbar {
+            position: static;
+            z-index: 100;
+            width: 100%;
+        }
+
+        #about{
+            color:white;
+            text-align: center;
+        }
+
+        #contact {
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            margin-top: 20px;
+        }
+
+        .footer {
+            position: relative;
+            z-index: 10;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+                margin-top: 10px;
+            }
+
+            .card-deck {
+                flex-direction: column;
+            }
+
+            .card {
+                margin-bottom: 20px;
+            }
+        }
+
+        .btn {
+            color: rgb(255, 255, 255);
+            background-color: rgb(158, 26, 26);
+            padding: 15px;
+            border: none;
+        }
+
+        .btn:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgb(69, 14, 14);
+            padding: 15px;
+        }
+
+        .card{
+            color:black;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Phantom Thieves of Hearts</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">Sobre la organización</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Carrusel de fondo -->
+     <section id="hero">
+        <div id="carouselFondo" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-image: url('https://steamuserimages-a.akamaihd.net/ugc/843712565012777943/F4F628C6B66C3F4FA67B094F3C48755E95464EBD/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false');" class="d-block w-100"></div>
+                <div class="carousel-item" style="background-image: url('https://steamuserimages-a.akamaihd.net/ugc/843712565012780440/C937EA3F0958BF6410E7A21AEA54EF9FB75B0800/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false');" class="d-block w-100"></div>
+                <div class="carousel-item" style="background-image: url('https://steamuserimages-a.akamaihd.net/ugc/843712565012781290/214E6168B92137138902492AC3B7817E998740F0/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true');" class="d-block w-100"></div>
+                <div class="carousel-item" style="background-image: url('https://steamuserimages-a.akamaihd.net/ugc/843712565012780816/F2F600BA885BB838EAB46F0E75D3E7BF94EDE2E8/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true');" class="d-block w-100"></div>
+                <div class="carousel-item" style="background-image: url('https://steamuserimages-a.akamaihd.net/ugc/843712565012779008/53EAB963686DDFE64A5102E1BF8D52052DEAD791/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true');" class="d-block w-100"></div>
+                <div class="carousel-item" style="background-image: url('https://steamuserimages-a.akamaihd.net/ugc/843712565012778296/0C40EDF73B15C392882380C68772FA8DCABB7CB0/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true');" class="d-block w-100"></div>
+                <div class="carousel-item" style="background-image: url('https://steamuserimages-a.akamaihd.net/ugc/843712565012778650/912DEBA1BB30A3A91914DDEC6AB31BEF54BA9CD6/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true');" class="d-block w-100"></div>
+            <!-- el carrusel si funciona pero solo rota cuando quiere a pesar que tiene intervalo de 3 segundos-->
+            </div>
+        </div>
+    </section>
+    <!-- Contenido -->
+    <div class="content">
+        <h1>Bienvenidos al Phan-Site</h1>
+        <p>Un lugar para los verdaderos creyentes de los Phantom Thieves of Hearts.</p>
+    </div>
+
+    <!-- Seccion Sobre la organizacion -->
+    <div id="about" class="container mt-5">
+        <h2>Acerca de los Phantom Thieves</h2>
+        <div class="card-deck">
+            <div class="card">
+                <img src="https://booxinton.wordpress.com/wp-content/uploads/2018/03/persona_5___calling_card_base_by_elmind-db6sdx3-png.jpg" class="card-img-top" alt="Card 1" height="300">
+                <div class="card-body">
+                    <h5 class="card-title">Misión</h5>
+                    <p class="card-text">Nuestra misión es robar los corazones de los corruptos y hacer de este mundo un lugar mejor.</p>
+                    <a href="https://megamitensei.fandom.com/wiki/Persona_5" class="btn btn-primary">Leer más</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMlntLum_ooRM7H7ITGL_BXjj7cjQxJwsxHA&s" class="card-img-top" alt="Card 2" height="300">
+                <div class="card-body">
+                    <h5 class="card-title">Visión</h5>
+                    <p class="card-text">Creemos en la justicia y en luchar contra la opresión.</p>
+                    <a href="https://youtu.be/0jm8nnHqx80" class="btn btn-primary">Leer más</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://preview.redd.it/a3p8ezqg26j71.jpg?width=1920&format=pjpg&auto=webp&s=b48aec467256cdf60bae9eadd317bf792ee737cd" class="card-img-top" alt="Card 3" height="300">
+                <div class="card-body">
+                    <h5 class="card-title">Valores</h5>
+                    <p class="card-text">Valor, solidaridad y esperanza son los pilares de nuestra organización.</p>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D" class="btn btn-primary">Leer más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formulario de contacto -->
+    <div id="contact" class="container mt-5">
+        <h2>Contáctanos</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre">
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo">
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+
+    <footer class="footer text-center mt-5">
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
